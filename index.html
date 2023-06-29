@@ -19,5 +19,11 @@
       <h2>Right Section</h2>
     </section>
   </div>
+
+  <script>
+    fetch('/api/people')
+      .then(res => res.json())
+      .then(data => console.log(data));
+  </script>
 </body>
 </html>
