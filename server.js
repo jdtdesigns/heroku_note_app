@@ -1,21 +1,14 @@
 const express = require('express');
-const path = require('path');
+const view_routes = require('./routes/view_routes');
+const api_routes = require('./routes/api_routes');
+// const path = require('path');
 
 const app = express();
 
 app.use(express.static('./public'));
+app.use(express.urlencoded({ extended: false }));
 
-
-app.get('/about', (clientRequestObject, serverResponseObject) => {
-  serverResponseObject.sendFile(path.join(__dirname, 'public/about.html'));
-});
-
-app.get('/api/test', (clientRequestObj, serverResponseObj) => {
-  serverResponseObj.send({
-    name: 'JD',
-    age: 43
-  });
-});
-
+// Load Routes
+app.use('/', [view_routes, api_routes]);
 
 app.listen(3333, () => console.log('Server started on port 3333.'));

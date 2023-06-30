@@ -4,26 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HomePage</title>
+  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <nav>
-    <a href="/about">About</a>
-  </nav>
+  <h1 class="text-center">Note App</h1>
 
-  <h1>HomePage</h1>
+  <form action="/notes" method="POST" class="flex-column">
+    <input class="p-2" name="note" type="text" placeholder="Enter your note">
+    <button class="btn btn-dark mt-2">Save Note</button>
+  </form>
 
-  <!-- <img src="/images/IMG_1494.jpg" alt=""> -->
-
-  <div class="row">
-    <section class="col">
-      <h2>Left Section</h2>
-    </section>
-
-    <section class="col">
-      <h2>Right Section</h2>
-    </section>
-  </div>
+  <main id="note-output" class="flex-column p-5">
+    <p>No notes have been added.</p>
+  </main>
 
   <script src="/js/browser.js"></script>  
 </body>

@@ -1,3 +1,8 @@
-img {
-  max-width: 100%;
+form {
+  width: 400px;
+  margin: 35px auto 0;
+}
+
+.note {
+  border: 1px solid #555;
 }
